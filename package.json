@@ -11,7 +11,7 @@
     "url": "git+https://github.com/miguelbouchan/solonode.git"
   },
   "keywords": [
-    "macha",
+    "mocha",
     "chai"
   ],
   "author": "mike",
@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/miguelbouchan/solonode#readme",
   "dependencies": {
+    "async": "^2.1.4",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "lambda-local": "^1.4.0",
+    "mocha": "^3.2.0",
+    "path": "^0.12.7"
   }
 }

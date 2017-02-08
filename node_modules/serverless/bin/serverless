@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+'use strict';
+
+let argv   = require('minimist')(process.argv.slice(2));
+
+if (argv.debug) process.env.DEBUG = '*';
+
+let S         = require('../lib/Serverless'),
+  SUtils      = require('../lib/utils'),
+  Project     = require('../lib/Project'),
+  serverless  = new S({
+    projectPath: SUtils.findProjectPath(process.cwd()),
+    interactive: typeof process.env.CI === 'undefined'
+  });
+
+serverless.init()
+  .then(function(){
+    serverless.command(argv);
+  });
