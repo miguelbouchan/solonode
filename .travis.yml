@@ -3,6 +3,9 @@ node_js:
   - "4"
 env:
   - CXX=g++-4.8
+
+before_script: chmod 0777 ./node_modules/.bin/mocha
+
 addons:
   apt:
     sources:
