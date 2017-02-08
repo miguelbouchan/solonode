@@ -3,6 +3,6 @@
 module.exports.handler = function(event, context, cb) {
   console.log("viene de event: "+event.nombre)
   return cb(null, {
-    nombre: "mike"
+    nombre: "nacho"
   });
 };
