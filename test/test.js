@@ -12,7 +12,7 @@ var func = [["buscauseroracle", jsonuser, 'serverless-h1mpex/buscauseroracle/han
 
 console.log("ubicacion de raiz" + func[0][2])
 describe('test to use in serverless', function () {
-	it('should pass if the answer is mike', function () {
+	it('should pass if the answer is nacho', function () {
 
 		async.each(func, function (item, callback) {
 			lambdaLocal.execute({
@@ -31,7 +31,7 @@ describe('test to use in serverless', function () {
 						console.log(data)
 						var nombre=data.nombre
 						console.log("****************************")
-						expect(nombre).to.equal("mike");
+						expect(nombre).to.equal("nacho");
 						console.log("****************************")
 						if (data.nombre == "mike") {
 							complete.push({ "funcion_correcta": "nombre de la funcion: " + item[0] + "----ubicacion ed la funcion: " + item[2] });
