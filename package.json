@@ -1,12 +1,27 @@
 {
-  "name": "holamundo",
+  "name": "solonode",
   "version": "1.0.0",
-  "description": "",
-  "main": "holamundo.js",
+  "description": "\"prueba test\"",
+  "main": "index.js",
   "scripts": {
-    "test": "vows --spec"
+    "test": "mocha"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelbouchan/solonode.git"
+  },
+  "keywords": [
+    "macha",
+    "chai"
+  ],
+  "author": "mike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelbouchan/solonode/issues"
+  },
+  "homepage": "https://github.com/miguelbouchan/solonode#readme",
   "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
