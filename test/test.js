@@ -31,7 +31,7 @@ describe('test to use in serverless', function () {
 						console.log(data)
 						var nombre=data.nombre
 						console.log("****************************")
-						expect(nombre).to.equal("nacho");
+						expect(nombre).to.equal("mike");
 						console.log("****************************")
 						if (data.nombre == "mike") {
 							complete.push({ "funcion_correcta": "nombre de la funcion: " + item[0] + "----ubicacion ed la funcion: " + item[2] });
