@@ -5,7 +5,7 @@ var path = require("path");
 var async = require('async');
 var error = [];
 var complete = [];
-var jsonuser = { "correo": "miguelangelbouchan3@hotmail.com" }
+var jsonuser = { "correo": "miguelangelbouchan3" }
 
 var func = [["buscauseroracle", jsonuser, 'serverless-h1mpex/buscauseroracle/handler.js']];
 
