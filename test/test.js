@@ -5,14 +5,14 @@ var path = require("path");
 var async = require('async');
 var error = [];
 var complete = [];
-var jsonuser = { "nombre": "mike" }
+var jsonuser = { "correo": "miguelangelbouchan3@hotmail.com" }
 
 var func = [["buscauseroracle", jsonuser, 'serverless-h1mpex/buscauseroracle/handler.js']];
 
 
 console.log("ubicacion de raiz" + func[0][2])
 describe('test to use in serverless', function () {
-	it('should pass if the answer is nacho', function () {
+	it('should pass if the answer is 0', function () {
 
 		async.each(func, function (item, callback) {
 			lambdaLocal.execute({
@@ -29,11 +29,11 @@ describe('test to use in serverless', function () {
 					} else {
 						console.log("****************************")
 						console.log(data)
-						var nombre=data.nombre
+						var respuesta=data.err
 						console.log("****************************")
-						expect(nombre).to.equal("mike");
+						expect(respuesta).to.equal(0);
 						console.log("****************************")
-						if (data.nombre == "mike") {
+						if (data.err == 0) {
 							complete.push({ "funcion_correcta": "nombre de la funcion: " + item[0] + "----ubicacion ed la funcion: " + item[2] });
 						}
 						else {
