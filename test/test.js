@@ -12,7 +12,7 @@ var func = [["buscauseroracle", jsonuser, 'serverless-h1mpex/buscauseroracle/han
 
 console.log("ubicacion de raiz" + func[0][2])
 describe('test to use in serverless', function () {
-	it('should pass if the answer is 0', function () {
+	it('should pass if the answer is 0 in each service', function () {
 
 		async.each(func, function (item, callback) {
 			lambdaLocal.execute({
