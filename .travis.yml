@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "6"
+env:
+  - CXX=g++-4.8
+
+before_script: chmod 0777 ./node_modules/.bin/mocha
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
