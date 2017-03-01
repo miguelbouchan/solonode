@@ -21,7 +21,7 @@ module.exports.handler = function(event, context, cb) {
 
   var sql = "BEGIN MDM.GET_REF_PROFESSION(:C_LISTA, :P_ERR_NO, :P_ERR_MSG ); END;";
   oracledb.execute(sql, bindvars, function(err, result) {
-
+    console.log("result: "+result)
     if (err) {
       return cb(null, {
         err:1,
