@@ -51,7 +51,8 @@ module.exports.handler = function(event, context, cb) {
       return cb(null, {
         err:0,
         message:"",
-        p_data:lista
+        p_data:lista,
+        otro:"yes"
       });
     }
   });
