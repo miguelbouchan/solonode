@@ -52,6 +52,7 @@ module.exports.handler = function(event, context, cb) {
         err:0,
         message:"",
         p_data:lista,
+        tamaño:lista.length,
         otro:"cambio333"
       });
     }
