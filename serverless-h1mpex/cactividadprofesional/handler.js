@@ -53,7 +53,7 @@ module.exports.handler = function(event, context, cb) {
         message:"",
         p_data:lista,
         tamaño:lista.length,
-        otro:"nachopolis"
+        otro:"nachopolis333"
       });
     }
   });
