@@ -5,7 +5,7 @@ var path = require("path");
 var async = require('async');
 var error = [];
 var complete = [];
-var jsonuser = { "correo": "miguelangelbouchan3@hotmail.com" };
+var jsonuser = { "correo": "miguelangelbouchan3" };
 var event2 = {};
 
 var func = [
