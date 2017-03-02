@@ -9,7 +9,7 @@ var jsonuser = { "correo": "miguelangelbouchan3@hotmail.com" };
 var event2 = {};
 
 var func = [
-["buscaUserOracle", jsonuser, 'serverless-h1mpex/buscauseroracle/handler.js'],
+//["buscaUserOracle", jsonuser, 'serverless-h1mpex/buscauseroracle/handler.js'],
 ["catalogoActividadProfesional", event2, 'serverless-h1mpex/cactividadprofesional/handler.js']];
 
 //describe('test to use in serverless', function () {
