@@ -1,5 +1,5 @@
 {
-  "name": "serviciopruebas",
+  "name": "servicioprueba2",
   "runtime": "nodejs4.3",
   "description": "Serverless Lambda function for project: latasa",
   "customName": false,
@@ -13,7 +13,7 @@
   },
   "endpoints": [
     {
-      "path": "serviciopruebas",
+      "path": "servicioprueba2",
       "method": "GET",
       "type": "AWS",
       "authorizationType": "none",
