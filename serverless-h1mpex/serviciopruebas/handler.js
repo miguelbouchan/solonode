@@ -5,7 +5,7 @@ module.exports.handler = function (event, context, cb) {
 	console.log("iniciando funcion de prueba")
 	return cb(null, {
 		err: 0,
-		message: "mensaje de muestra mike",
+		message: "mensaje de muestra nacho",
 		p_data: { datos: "no hay datos" }
 	});
 };
