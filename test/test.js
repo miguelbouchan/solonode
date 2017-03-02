@@ -10,7 +10,8 @@ var event2 = {};
 
 var func = [
 //["buscaUserOracle", jsonuser, 'serverless-h1mpex/buscauseroracle/handler.js'],
-["catalogoActividadProfesional", event2, 'serverless-h1mpex/cactividadprofesional/handler.js']];
+["catalogoActividadProfesional", event2, 'serverless-h1mpex/cactividadprofesional/handler.js'],
+["serviciopruebas", event2, 'serverless-h1mpex/serviciopruebas/handler.js']];
 
 //describe('test to use in serverless', function () {
 //it('should pass if the answer is 0 in each service', function () {
