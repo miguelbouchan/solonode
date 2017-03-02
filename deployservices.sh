@@ -6,7 +6,7 @@ do
     cd $i
     zip -r $i.zip .
     aws lambda update-function-code --function-name latasa-$i --zip-file fileb://$i.zip --publish
-    lambdaaws="'arn:aws:lambda:us-east-1:944195423972:function:latasa-"$i"'"
+    lambdaaws="arn:aws:lambda:us-east-1:944195423972:function:latasa-"$i
     echo "valor lambdaaws"
     echo $lambdaaws
     lambda_publish="$(aws lambda publish-version --function-name $lambdaaws --description '1' --region 'us-east-1')"
