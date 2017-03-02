@@ -52,7 +52,7 @@ module.exports.handler = function(event, context, cb) {
         err:0,
         message:"",
         p_data:lista,
-        otro:"yes"
+        otro:"cambio"
       });
     }
   });
