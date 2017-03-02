@@ -13,5 +13,4 @@ do
     lambda_version="$(echo $lambda_publish | /usr/bin/python -c 'import sys, json; print json.load(sys.stdin)["Version"]')"
     echo $lambda_version
     aws lambda update-alias --function-name latasa-cactividadprofesional --name "dev" --function-version $lambda_version
-    cd..
 done
