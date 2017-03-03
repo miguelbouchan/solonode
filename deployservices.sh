@@ -1,7 +1,7 @@
-cd serverless-h1mpex
+undefinedundefinedundefinedcd serverless-h1mpex
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "dir is : "$DIR
-array=( cactividadprofesional serviciopruebas )
+array=( serviciopruebas )
 for i in "${array[@]}"
 do
     cd $i
@@ -15,3 +15,5 @@ do
     aws lambda update-alias --function-name latasa-$i --name "dev" --function-version $lambda_version
     cd -
 done
+
+
