@@ -1,5 +1,6 @@
 cd serverless-h1mpex
-
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "dir is : "$DIR
 array=( cactividadprofesional serviciopruebas )
 for i in "${array[@]}"
 do
