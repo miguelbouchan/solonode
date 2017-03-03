@@ -6,6 +6,6 @@ module.exports.handler = function (event, context, cb) {
 	return cb(null, {
 		err: 0,
 		message: "mensaje de mike",
-		p_data: { datos: "nacho123" }
+		p_data: { datos: "nacho123-zx" }
 	});
 };
