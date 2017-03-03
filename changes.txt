@@ -1,3 +1,1 @@
 changes.txt
-serverless-h1mpex/cactividadprofesional/handler.js
-serverless-h1mpex/serviciopruebas/handler.js
