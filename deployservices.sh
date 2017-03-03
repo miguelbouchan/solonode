@@ -1,6 +1,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "dir is : "$DIR
-#declare -A
+declare -A servicio0=([nombre]='cactividadprofesional' [direccion]='serverless-h1mpex/cactividadprofesional/') servicio1=([nombre]='serviciopruebas' [direccion]='serverless-h1mpex/serviciopruebas/') 
 for id_service in ${!servicio@}; 
 do
     declare -n servicio=$id_service
@@ -15,6 +15,7 @@ do
     aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
     cd $DIR
 done
+
 
 
 
