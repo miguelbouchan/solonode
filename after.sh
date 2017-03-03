@@ -1,2 +1,2 @@
-git show --stat --oneline HEAD > changes.txt
+git diff --name-only > changes.txt
 node getResult.js
