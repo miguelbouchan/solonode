@@ -1,5 +1,7 @@
-after.sh
+array.sh
 changes.txt
 deployservices.sh
 getResult.js
+package.json
 serverless-h1mpex/cactividadprofesional/handler.js
+serverless-h1mpex/serviciopruebas/handler.js
