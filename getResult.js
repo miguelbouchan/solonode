@@ -13,37 +13,21 @@ fs.readFile('changes.txt', 'utf8', function (err, data) {
             newarr.push(arr[i]);
         }
     }
-    
-    var service = {};
     var sync = true;
-    var valores=[];
+    var valores = [];
     for (var i = 0; i < newarr.length; i++) {
         var sync = true;
         var cadena = newarr[i].replace(/handler.js/, "s-function.json")
         var direccion = newarr[i].replace(/handler.js/, "")
-        console.log(cadena)
         fs.readFile(cadena, 'utf8', function (err, datajson) {
             var resultado = JSON.parse(datajson);
-            service.name = resultado.name;
-            service.dir = direccion;
-            valores.push({name:resultado.name,dir:direccion})
-            console.log(service)
-            console.log("----------------------------")
-             console.log(datosGenerales)
-            datosGenerales.push(service);
-            console.log(datosGenerales)
-            console.log("----------------------------")
+            valores.push({ name: resultado.name, dir: direccion })
             sync = false;
         });
         while (sync) { require('deasync').sleep(100); }
-        console.log(i)
     }
-    console.log(valores)
-    console.log("valores")
     writeFile(valores)
 });
-
-
 
 function writeFile(datosGenerales) {
     fs.readFile("deployservices.sh", 'utf8', function (err, datash) {
@@ -59,7 +43,6 @@ function writeFile(datosGenerales) {
                     arrsh[j] = "declare -A ";
                 }
                 for (var k = 0; k < datosGenerales.length; k++) {
-                    //arrsh[j] = arrsh[j].replace(new RegExp("\\)", 'gi'), datosGenerales[k].name + " )");
                     arrsh[j] = arrsh[j] + "servicio" + k + "=([nombre]='" + datosGenerales[k].name + "' [direccion]='" + datosGenerales[k].dir + "') ";
                 }
             }
