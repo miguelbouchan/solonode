@@ -1,5 +1,4 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo "dir is : "$DIR
 declare -A servicio0=([nombre]='cactividadprofesional' [direccion]='serverless-h1mpex/cactividadprofesional/') 
 for id_service in ${!servicio@}; 
 do
@@ -15,8 +14,11 @@ do
         lambda_version="$(echo $lambda_publish | /usr/bin/python -c 'import sys, json; print json.load(sys.stdin)["Version"]')"
         aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
         cd $DIR
+    else
+        echo "change value doDeploy to deploy service: ${servicio[nombre]}"
     fi
 done
+
 
 
 

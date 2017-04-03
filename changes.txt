@@ -1,3 +1,2 @@
 deployservices.sh
-readfolder.js
 serverless-h1mpex/cactividadprofesional/handler.js
