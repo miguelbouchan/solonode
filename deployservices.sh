@@ -1,20 +1,23 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "dir is : "$DIR
-declare -A servicio0=([nombre]='cactividadprofesional' [direccion]='serverless-h1mpex/cactividadprofesional/') servicio1=([nombre]='serviciopruebas' [direccion]='serverless-h1mpex/serviciopruebas/') 
+declare -A servicio0=([nombre]='cactividadprofesional' [direccion]='serverless-h1mpex/cactividadprofesional/') 
 for id_service in ${!servicio@}; 
 do
-    declare -n servicio=$id_service
-    cd ${servicio[direccion]}
-    zip -r ${servicio[nombre]}.zip .
-    echo "deploy lambda named ${servicio[nombre]}"
-    aws lambda update-function-code --function-name latasa-${servicio[nombre]} --zip-file fileb://${servicio[nombre]}.zip --publish
-    lambdaaws="arn:aws:lambda:us-east-1:944195423972:function:latasa-"${servicio[nombre]}
-    lambda_publish="$(aws lambda publish-version --function-name $lambdaaws --description '1' --region 'us-east-1')"
-    export PYTHONIOENCODING=utf8
-    lambda_version="$(echo $lambda_publish | /usr/bin/python -c 'import sys, json; print json.load(sys.stdin)["Version"]')"
-    aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
-    cd $DIR
+    if $doDeploy ; then
+        declare -n servicio=$id_service
+        cd ${servicio[direccion]}
+        zip -r ${servicio[nombre]}.zip .
+        echo "deploy lambda named ${servicio[nombre]}"
+        aws lambda update-function-code --function-name latasa-${servicio[nombre]} --zip-file fileb://${servicio[nombre]}.zip --publish
+        lambdaaws="arn:aws:lambda:us-east-1:944195423972:function:latasa-"${servicio[nombre]}
+        lambda_publish="$(aws lambda publish-version --function-name $lambdaaws --description '1' --region 'us-east-1')"
+        export PYTHONIOENCODING=utf8
+        lambda_version="$(echo $lambda_publish | /usr/bin/python -c 'import sys, json; print json.load(sys.stdin)["Version"]')"
+        aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
+        cd $DIR
+    fi
 done
+
 
 
 
