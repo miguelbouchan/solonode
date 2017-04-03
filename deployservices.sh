@@ -15,9 +15,10 @@ do
         aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
         cd $DIR
     else
-        echo "change value doDeploy to deploy service: ${servicio[nombre]}"
+        echo "change value doDeploy to deploy service ${servicio[nombre]}"
     fi
 done
+
 
 
 
