@@ -331,7 +331,8 @@ module.exports.handler = function (event, context, cb) {
 							"domicilio": domicilioC,
 							"usuariosTerminados": usuariosTerminados,
 							"usuariosTerminadosMoral": usuariosTerminadosMoral,
-							"cambio_nuevo":"true"
+							"cambio_nuevo":"true",
+							"otro":"false"
 						}
 					});
 				}
@@ -345,7 +346,8 @@ module.exports.handler = function (event, context, cb) {
 							"domicilio": [],
 							"usuariosTerminados": [],
 							"usuariosTerminadosMoral": [],
-							"cambio_nuevo":"true"
+							"cambio_nuevo":"true",
+							"otro":"false"
 						}
 					});
 				}
