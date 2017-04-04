@@ -1,5 +1,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-declare -A servicio0=([nombre]='cactividadprofesional' [direccion]='serverless-h1mpex/cactividadprofesional/') 
+declare -A servicio0=([nombre]='getinvestor' [direccion]='serverless-h1mpex/getinvestor/post/') 
 for id_service in ${!servicio@}; 
 do
     if $doDeploy ; then
@@ -15,9 +15,12 @@ do
         aws lambda update-alias --function-name latasa-${servicio[nombre]} --name "dev" --function-version $lambda_version
         cd $DIR
     else
-        echo "change value doDeploy to deploy service ${servicio[nombre]}"
+        echo "change value doDeploy to deploy services"
     fi
 done
+
+
+
 
 
 

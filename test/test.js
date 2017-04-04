@@ -5,12 +5,25 @@ var path = require("path");
 var async = require('async');
 var error = [];
 var complete = [];
-var jsonuser = { "correo": "miguelangelbouchan3@hotmail.com" };
+var jsonuser = {
+	"fecha": "2017-02-14",
+	"fechaF": "2017-03-22"
+};
 var event2 = {};
 
+process.env.ORCL_USER="LATASAUSER";
+process.env.SERVERLESS_STAGE="dev";
+
+process.env.DYNAMO_KEY_LTSAPPWEB="${dynamo_key_ltsappweb}"
+process.env.DYNAMO_SECRET_LTSAPPWEB="${dynamo_secret_ltsappweb}"
+process.env.SERVERLESS_REGION="${region_dinamo_dev}"
+process.env.TABLE_BORROWER_DEV="${table_borrower_dev}"
+process.env.TABLE_BORROWER="${table_borrower}"
+
 var func = [
-	["catalogoActividadProfesional", event2, 'serverless-h1mpex/cactividadprofesional/handler.js'],
-	["serviciopruebas", event2, 'serverless-h1mpex/serviciopruebas/handler.js']];
+	["getinvestor", jsonuser, 'serverless-h1mpex/getinvestor/post/handler.js']];
+
+
 
 async.each(func, function (item, callback) {
 	describe('test to use in serverless', function () {

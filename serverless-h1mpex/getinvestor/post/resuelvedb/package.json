@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      "resuelvedb",
+      "/Users/emadrid/Documents/AWS/resuelveDB-Lambda-Sample"
+    ]
+  ],
+  "_from": "resuelvedb@latest",
+  "_id": "resuelvedb@0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/resuelvedb",
+  "_nodeVersion": "4.4.1",
+  "_npmUser": {
+    "email": "emadrid@resuelve.mx",
+    "name": "cjbj"
+  },
+  "_npmVersion": "2.14.20",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "resuelvedb",
+    "raw": "resuelvedb",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/resuelvedb/-/resuelvedb-1.8.0.tgz",
+  "_shasum": "2c1be7bea6d8abf22f76993c7d3d61f87839ed86",
+  "_shrinkwrap": null,
+  "_spec": "resuelvedb",
+  "_where": "/Users/emadrid/Documents/AWS/resuelveDB-Lambda-Sample",
+  "bugs": {
+    "url": "https://github.com/oracle/node-resuelvedb/issues"
+  },
+  "dependencies": {
+    "nan": "~2.2.0"
+  },
+  "description": "Resuelve Database Adapter",
+  "devDependencies": {
+    "async": "~0.9.0",
+    "mocha": "~2.2.5",
+    "should": "~6.0.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "2c1be7bea6d8abf22f76993c7d3d61f87839ed86",
+    "tarball": "https://registry.npmjs.org/resuelvedb/-/resuelvedb-1.8.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.28 <6"
+  },
+  "gypfile": true,
+  "homepage": "http://www.resuelve.mx",
+  "keywords": [
+    "resuelvedb"
+  ],
+  "license": "Apache-2.0",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "email": "emadrid@resuelve.mx",
+      "name": "cjbj"
+    }
+  ],
+  "name": "resuelvedb",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/resuelve/node-resuelvedb.git"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "test": "mocha -R spec --timeout 10000 test/*.js",
+    "testWindows": "mocha -R spec --timeout 0 test\\*.js"
+  },
+  "version": "0.1",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "pkgid": "resuelvedb@0.1",
+      "required": {
+        "node": ">=0.10.28"
+      }
+    },
+    {
+      "code": "ENOTSUP",
+      "pkgid": "resuelvedb@0.1",
+      "required": {
+        "node": ">=0.10.28"
+      }
+    }
+  ]
+}
