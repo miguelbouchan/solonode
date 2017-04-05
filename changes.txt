@@ -1,1 +1,3 @@
-serverless-h1mpex/getinvestor/post/handler.js
+serverless-h1mpex/cactividadprofesional/_serverless_handler.js
+serverless-h1mpex/cactividadprofesional/handler.js
+test/test.js

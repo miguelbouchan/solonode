@@ -14,11 +14,6 @@ var event2 = {};
 process.env.ORCL_USER="LATASAUSER";
 process.env.SERVERLESS_STAGE="dev";
 
-process.env.DYNAMO_KEY_LTSAPPWEB="${dynamo_key_ltsappweb}"
-process.env.DYNAMO_SECRET_LTSAPPWEB="${dynamo_secret_ltsappweb}"
-process.env.SERVERLESS_REGION="${region_dinamo_dev}"
-process.env.TABLE_BORROWER_DEV="${table_borrower_dev}"
-process.env.TABLE_BORROWER="${table_borrower}"
 
 var func = [
 	["getinvestor", jsonuser, 'serverless-h1mpex/getinvestor/post/handler.js']];
