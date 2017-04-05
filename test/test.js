@@ -11,14 +11,8 @@ var jsonuser = {
 };
 var event2 = {};
 
-process.env.ORCL_USER="LATASAUSER";
-process.env.SERVERLESS_STAGE="dev";
-
-
 var func = [
 	["getinvestor", jsonuser, 'serverless-h1mpex/getinvestor/post/handler.js']];
-
-
 
 async.each(func, function (item, callback) {
 	describe('test to use in serverless', function () {

@@ -1,5 +1,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-declare -A servicio0=([nombre]='cactividadprofesional' [direccion]='serverless-h1mpex/cactividadprofesional/') 
+#declare -A
 for id_service in ${!servicio@}; 
 do
     if $doDeploy ; then
@@ -18,6 +18,7 @@ do
         echo "change value doDeploy to deploy services"
     fi
 done
+
 
 
 

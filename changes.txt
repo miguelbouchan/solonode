@@ -1,3 +1,1 @@
-changes.txt
-deployservices.sh
-serverless-h1mpex/cactividadprofesional/handler.js
+test/test.js
