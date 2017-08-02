@@ -29,6 +29,7 @@ npm-debug.log
 /.haml-lint.yml
 /coverage/*
 /node_modules
+/platforms
 /front/docs/*
 /public/system
 /public/assets
