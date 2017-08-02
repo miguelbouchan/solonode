@@ -30,6 +30,7 @@ npm-debug.log
 /coverage/*
 /node_modules
 /platforms
+/www/build
 /front/docs/*
 /public/system
 /public/assets
