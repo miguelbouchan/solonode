@@ -1,22 +1,16 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import $ from 'jquery';
+import * as $ from 'jquery'
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
 })
 export class HomePage {
-  location: Location;
-  constructor(public navCtrl: NavController,
-  location: Location) {
-    this.location = location
-
+  mobNavWrpHeight: number = 0;
+  constructor(public navCtrl: NavController) {
   }
 
-  vh:any;
 
   openMenu() {
     let parent = document.getElementsByClassName("burger");
@@ -24,55 +18,29 @@ export class HomePage {
     for (var i = 0; i < parent.length; i++) {
       parent[i].classList.toggle("burger--active")
     }
-    for (var i = 0; i < nav.length; i++) {
-      nav[i].classList.toggle("nav__list--active")
+    for (var j = 0; j < nav.length; j++) {
+      nav[j].classList.toggle("nav__list--active")
     }
   };
 
-  // reveal content of first panel by default
-
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    console.log("se ha dado scroll")
-    //we'll do some stuff here when the window is scrolled
+  goToSection(event) {
+    console.log(event)
+    var registerDone = document.getElementById(event);
+    var registerDoneOffset = registerDone.offsetTop;
+    this.slideTo(0, registerDoneOffset, 500);
   }
 
-  scrollFx() {
-    let doc = $(document);
-    var ds = doc.scrollTop();
-    var of = this.vh / 4;
-    // if the panel is in the viewport, reveal the content, if not, hide it.location: Location
-    let panel:any = document.getElementsByClassName("panel__content");
-    for (var i = 0; i < panel.length; i++) {
-      if (panel[i].offsetTop < ds + of) {
-        //panel[i].find(".panel__content").addClass("panel__content--active");
-      } else {
-        //panel[i].find(".panel__content").removeClass("panel__content--active");
-      }
+  slideTo(x, y, time) {
+    var bodyWidth = document.getElementsByTagName('body')[0].offsetWidth;
+    if (bodyWidth <= 1500) {
+      y = y - this.mobNavWrpHeight - 10;
     }
-  };
+    $("ion-content").animate({ scrollTop: 300 }, 300);
+  }
 
-  scrolly(e) {
-    e.preventDefault();
-    var target = this.location;
-    var $target = $(target);
-
-    $("html, body").stop().animate({
-      scrollTop: $target.offset().top
-    }, 300, "swing", function () {
-      //window.location.hash = target;
-    });
-  };
 
   ngOnInit() {
-    this.vh = $(window).height();
-
-    let panel:any = document.getElementsByClassName("panel__content");
-    panel[0].classList.add("panel__content--active");
-
-    window.addEventListener("scroll", this.scrollFx, false);
-    window.addEventListener("load", this.scrollFx, false);
-    //$('a[href^="#"]').on("click", this.scrolly);
+    console.log("entre aqui")
   };
 
 

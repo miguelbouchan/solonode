@@ -32,10 +32,9 @@ webpackEmptyAsyncContext.id = 147;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,11 +47,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var HomePage = (function () {
-    function HomePage(navCtrl, location) {
+    function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.location = location;
+        this.mobNavWrpHeight = 0;
     }
     HomePage.prototype.openMenu = function () {
         var parent = document.getElementsByClassName("burger");
@@ -60,67 +58,35 @@ var HomePage = (function () {
         for (var i = 0; i < parent.length; i++) {
             parent[i].classList.toggle("burger--active");
         }
-        for (var i = 0; i < nav.length; i++) {
-            nav[i].classList.toggle("nav__list--active");
+        for (var j = 0; j < nav.length; j++) {
+            nav[j].classList.toggle("nav__list--active");
         }
     };
     ;
-    // reveal content of first panel by default
-    HomePage.prototype.onWindowScroll = function () {
-        console.log("se ha dado scroll");
-        //we'll do some stuff here when the window is scrolled
+    HomePage.prototype.goToSection = function (event) {
+        console.log(event);
+        var registerDone = document.getElementById(event);
+        var registerDoneOffset = registerDone.offsetTop;
+        this.slideTo(0, registerDoneOffset, 500);
     };
-    HomePage.prototype.scrollFx = function () {
-        var doc = __WEBPACK_IMPORTED_MODULE_3_jquery___default()(document);
-        var ds = doc.scrollTop();
-        var of = this.vh / 4;
-        // if the panel is in the viewport, reveal the content, if not, hide it.location: Location
-        var panel = document.getElementsByClassName("panel__content");
-        for (var i = 0; i < panel.length; i++) {
-            if (panel[i].offsetTop < ds + of) {
-                //panel[i].find(".panel__content").addClass("panel__content--active");
-            }
-            else {
-                //panel[i].find(".panel__content").removeClass("panel__content--active");
-            }
+    HomePage.prototype.slideTo = function (x, y, time) {
+        var bodyWidth = document.getElementsByTagName('body')[0].offsetWidth;
+        if (bodyWidth <= 1500) {
+            y = y - this.mobNavWrpHeight - 10;
         }
+        __WEBPACK_IMPORTED_MODULE_2_jquery__("ion-content").animate({ scrollTop: 300 }, 300);
     };
-    ;
-    HomePage.prototype.scrolly = function (e) {
-        e.preventDefault();
-        var target = this.location;
-        var $target = __WEBPACK_IMPORTED_MODULE_3_jquery___default()(target);
-        __WEBPACK_IMPORTED_MODULE_3_jquery___default()("html, body").stop().animate({
-            scrollTop: $target.offset().top
-        }, 300, "swing", function () {
-            //window.location.hash = target;
-        });
-    };
-    ;
     HomePage.prototype.ngOnInit = function () {
-        this.vh = __WEBPACK_IMPORTED_MODULE_3_jquery___default()(window).height();
-        var panel = document.getElementsByClassName("panel__content");
-        panel[0].classList.add("panel__content--active");
-        window.addEventListener("scroll", this.scrollFx, false);
-        window.addEventListener("load", this.scrollFx, false);
-        //$('a[href^="#"]').on("click", this.scrolly);
+        console.log("entre aqui");
     };
     ;
     return HomePage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])("window:scroll", []),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], HomePage.prototype, "onWindowScroll", null);
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/'<nav class="nav">\n  <div class="burger" (click)=\'openMenu()\'>\n    <div class="burger__patty"></div>\n  </div>\n\n  <ul class="nav__list">\n    <li class="nav__item">\n      <a href="#1" class="nav__link c-blue"><i class="fa fa-camera-retro"></i></a>\n    </li>\n    <li class="nav__item">\n      <a href="#2" class="nav__link c-yellow scrolly"><i class="fa fa-bolt"></i></a>\n    </li>\n    <li class="nav__item">\n      <a href="#3" class="nav__link c-red"><i class="fa fa-music"></i></a>\n    </li>\n    <li class="nav__item">\n      <a href="#4" class="nav__link c-green"><i class="fa fa-paper-plane"></i></a>\n    </li>\n  </ul>\n</nav>\n\n<section class="panel b-blue" id="1">\n  <article class="panel__wrapper">\n    <div class="panel__content">\n      <h1 class="panel__headline"><i class="fa fa-camera-retro"></i>&nbsp;Cameras</h1>\n      <div class="panel__block"></div>\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestias ducimus, eos asperiores, ab officia sint nostrum quia, corporis officiis id praesentium expedita numquam ad non error optio est in.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-yellow" id="2">\n  <article class="panel__wrapper">\n    <div class="panel__content">\n      <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp;Lightning</h1>\n      <div class="panel__block"></div>\n      <p>Paleo authentic mlkshk taxidermy, vinyl meditation lomo drinking vinegar sartorial raw denim Thundercats bitters selvage listicle. Keffiyeh Williamsburg gastropub McSweeney\'s.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-red" id="3">\n  <article class="panel__wrapper">\n    <div class="panel__content">\n      <h1 class="panel__headline"><i class="fa fa-music"></i>&nbsp;Music</h1>\n      <div class="panel__block"></div>\n      <p>Beard sriracha kitsch literally, taxidermy normcore aesthetic wayfarers salvia keffiyeh farm-to-table sartorial gluten-free mlkshk. Selvage normcore 3 wolf moon, umami Kickstarter artisan meggings cardigan drinking vinegar bicycle rights.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-green" id="4">\n  <article class="panel__wrapper">\n    <div class="panel__content">\n      <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Paper Planes</h1>\n      <div class="panel__block"></div>\n      <p>90\'s wayfarers lomo you probably haven\'t heard of them trust fund banh mi. Flannel Shoreditch dreamcatcher, quinoa flexitarian Banksy pickled post-ironic lo-fi. Photo booth asymmetrical tousled letterpress.</p>\n    </div>\n  </article>\n</section>\n<a href="http://ettrics.com/code/vertical-layout-navigation/" class="logo" target="_blank">\n <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" /> \n</a>\n'/*ion-inline-end:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["d" /* Location */], { provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* PathLocationStrategy */] }]
+        selector: 'page-home',template:/*ion-inline-start:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/'<ion-content>\n<nav class="nav">\n  <div class="burger" (click)=\'openMenu()\'>\n    <div class="burger__patty"></div>\n  </div>\n\n  <ul class="nav__list">\n    <li class="nav__item">\n      <a class="nav__link c-blue" (click)=\'goToSection(1)\'><i class="fa fa-camera-retro"></i></a>\n    </li>\n    <li class="nav__item">\n      <a href="#2" class="nav__link c-yellow scrolly" (click)=\'goToSection(2)\'><i class="fa fa-bolt"></i></a>\n    </li>\n    <li class="nav__item">\n      <a  class="nav__link c-red" (click)=\'goToSection(3)\'><i class="fa fa-music"></i></a>\n    </li>\n    <li class="nav__item">\n      <a class="nav__link c-green" (click)=\'goToSection(4)\'><i class="fa fa-paper-plane"></i></a>\n    </li>\n  </ul>\n</nav>\n\n<section class="panel b-blue" id="1">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-camera-retro"></i>&nbsp;Cameras</h1>\n      <div class="panel__block"></div>\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestias ducimus, eos asperiores, ab officia sint nostrum quia, corporis officiis id praesentium expedita numquam ad non error optio est in.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-yellow" id="2">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp;Lightning</h1>\n      <div class="panel__block"></div>\n      <p>Paleo authentic mlkshk taxidermy, vinyl meditation lomo drinking vinegar sartorial raw denim Thundercats bitters selvage listicle. Keffiyeh Williamsburg gastropub McSweeney\'s.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-red" id="3">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-music"></i>&nbsp;Music</h1>\n      <div class="panel__block"></div>\n      <p>Beard sriracha kitsch literally, taxidermy normcore aesthetic wayfarers salvia keffiyeh farm-to-table sartorial gluten-free mlkshk. Selvage normcore 3 wolf moon, umami Kickstarter artisan meggings cardigan drinking vinegar bicycle rights.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-green" id="4">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Paper Planes</h1>\n      <div class="panel__block"></div>\n      <p>90\'s wayfarers lomo you probably haven\'t heard of them trust fund banh mi. Flannel Shoreditch dreamcatcher, quinoa flexitarian Banksy pickled post-ironic lo-fi. Photo booth asymmetrical tousled letterpress.</p>\n    </div>\n  </article>\n</section>\n<a href="http://ettrics.com/code/vertical-layout-navigation/" class="logo" target="_blank">\n <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" /> \n</a>\n</ion-content>'/*ion-inline-end:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1__angular_common__["d" /* Location */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
