@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = 147;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -44,6 +44,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -68,6 +69,9 @@ var HomePage = (function () {
         var registerDone = document.getElementById(event);
         var registerDoneOffset = registerDone.offsetTop;
         this.slideTo(0, registerDoneOffset, 500);
+        //let cont:any =document.getElementById('content');
+        //cont.scrollTop(0, registerDoneOffset, 500)
+        this.content.scrollTo(0, registerDoneOffset, 500);
     };
     HomePage.prototype.slideTo = function (x, y, time) {
         var bodyWidth = document.getElementsByTagName('body')[0].offsetWidth;
@@ -82,13 +86,18 @@ var HomePage = (function () {
     ;
     return HomePage;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]) === "function" && _a || Object)
+], HomePage.prototype, "content", void 0);
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/'<ion-content>\n<nav class="nav">\n  <div class="burger" (click)=\'openMenu()\'>\n    <div class="burger__patty"></div>\n  </div>\n\n  <ul class="nav__list">\n    <li class="nav__item">\n      <a class="nav__link c-blue" (click)=\'goToSection(1)\'><i class="fa fa-camera-retro"></i></a>\n    </li>\n    <li class="nav__item">\n      <a href="#2" class="nav__link c-yellow scrolly" (click)=\'goToSection(2)\'><i class="fa fa-bolt"></i></a>\n    </li>\n    <li class="nav__item">\n      <a  class="nav__link c-red" (click)=\'goToSection(3)\'><i class="fa fa-music"></i></a>\n    </li>\n    <li class="nav__item">\n      <a class="nav__link c-green" (click)=\'goToSection(4)\'><i class="fa fa-paper-plane"></i></a>\n    </li>\n  </ul>\n</nav>\n\n<section class="panel b-blue" id="1">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-camera-retro"></i>&nbsp;Cameras</h1>\n      <div class="panel__block"></div>\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestias ducimus, eos asperiores, ab officia sint nostrum quia, corporis officiis id praesentium expedita numquam ad non error optio est in.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-yellow" id="2">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp;Lightning</h1>\n      <div class="panel__block"></div>\n      <p>Paleo authentic mlkshk taxidermy, vinyl meditation lomo drinking vinegar sartorial raw denim Thundercats bitters selvage listicle. Keffiyeh Williamsburg gastropub McSweeney\'s.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-red" id="3">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-music"></i>&nbsp;Music</h1>\n      <div class="panel__block"></div>\n      <p>Beard sriracha kitsch literally, taxidermy normcore aesthetic wayfarers salvia keffiyeh farm-to-table sartorial gluten-free mlkshk. Selvage normcore 3 wolf moon, umami Kickstarter artisan meggings cardigan drinking vinegar bicycle rights.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-green" id="4">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Paper Planes</h1>\n      <div class="panel__block"></div>\n      <p>90\'s wayfarers lomo you probably haven\'t heard of them trust fund banh mi. Flannel Shoreditch dreamcatcher, quinoa flexitarian Banksy pickled post-ironic lo-fi. Photo booth asymmetrical tousled letterpress.</p>\n    </div>\n  </article>\n</section>\n<a href="http://ettrics.com/code/vertical-layout-navigation/" class="logo" target="_blank">\n <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" /> \n</a>\n</ion-content>'/*ion-inline-end:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/'<ion-content id="content">\n<nav class="nav">\n  <div class="burger" (click)=\'openMenu()\'>\n    <div class="burger__patty"></div>\n  </div>\n\n  <ul class="nav__list">\n    <li class="nav__item">\n      <a class="nav__link c-blue" (click)=\'goToSection(1)\'><i class="fa fa-camera-retro"></i></a>\n    </li>\n    <li class="nav__item">\n      <a  class="nav__link c-yellow scrolly" (click)=\'goToSection(2)\'><i class="fa fa-bolt"></i></a>\n    </li>\n    <li class="nav__item">\n      <a  class="nav__link c-red" (click)=\'goToSection(3)\'><i class="fa fa-music"></i></a>\n    </li>\n    <li class="nav__item">\n      <a  class="nav__link c-green" (click)=\'goToSection(4)\'><i class="fa fa-paper-plane"></i></a>\n    </li>\n  </ul>\n</nav>\n\n<section class="panel b-blue" id="1">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-camera-retro"></i>&nbsp;Cameras</h1>\n      <div class="panel__block"></div>\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea molestias ducimus, eos asperiores, ab officia sint nostrum quia, corporis officiis id praesentium expedita numquam ad non error optio est in.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-yellow" id="2">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-bolt"></i>&nbsp;Lightning</h1>\n      <div class="panel__block"></div>\n      <p>Paleo authentic mlkshk taxidermy, vinyl meditation lomo drinking vinegar sartorial raw denim Thundercats bitters selvage listicle. Keffiyeh Williamsburg gastropub McSweeney\'s.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-red" id="3">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-music"></i>&nbsp;Music</h1>\n      <div class="panel__block"></div>\n      <p>Beard sriracha kitsch literally, taxidermy normcore aesthetic wayfarers salvia keffiyeh farm-to-table sartorial gluten-free mlkshk. Selvage normcore 3 wolf moon, umami Kickstarter artisan meggings cardigan drinking vinegar bicycle rights.</p>\n    </div>\n  </article>\n</section>\n<section class="panel b-green" id="4">\n  <article class="panel__wrapper">\n    <div class="panel__content panel__content--active">\n      <h1 class="panel__headline"><i class="fa fa-paper-plane"></i>&nbsp;Paper Planes</h1>\n      <div class="panel__block"></div>\n      <p>90\'s wayfarers lomo you probably haven\'t heard of them trust fund banh mi. Flannel Shoreditch dreamcatcher, quinoa flexitarian Banksy pickled post-ironic lo-fi. Photo booth asymmetrical tousled letterpress.</p>\n    </div>\n  </article>\n</section>\n<a href="http://ettrics.com/code/vertical-layout-navigation/" class="logo" target="_blank">\n <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" /> \n</a>\n</ion-content>'/*ion-inline-end:"/home/miguel/Documentos/proyecto1/solonode/src/pages/home/home.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object])
 ], HomePage);
 
+var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -114,7 +123,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(260);
@@ -125,6 +134,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -145,9 +155,10 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */])
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */]),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */])
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */]
@@ -155,7 +166,7 @@ AppModule = __decorate([
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
         ]
     })
 ], AppModule);
@@ -170,7 +181,7 @@ AppModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(191);
@@ -203,7 +214,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/miguel/Documentos/proyecto1/solonode/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/miguel/Documentos/proyecto1/solonode/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map

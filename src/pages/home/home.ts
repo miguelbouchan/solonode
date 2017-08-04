@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Content } from 'ionic-angular';
 import * as $ from 'jquery'
 
 @Component({
@@ -8,6 +9,8 @@ import * as $ from 'jquery'
 })
 export class HomePage {
   mobNavWrpHeight: number = 0;
+
+  @ViewChild(Content) content: Content;
   constructor(public navCtrl: NavController) {
   }
 
@@ -28,6 +31,12 @@ export class HomePage {
     var registerDone = document.getElementById(event);
     var registerDoneOffset = registerDone.offsetTop;
     this.slideTo(0, registerDoneOffset, 500);
+
+    //let cont:any =document.getElementById('content');
+    //cont.scrollTop(0, registerDoneOffset, 500)
+
+    this.content.scrollTo(0, registerDoneOffset, 500);
+
   }
 
   slideTo(x, y, time) {
