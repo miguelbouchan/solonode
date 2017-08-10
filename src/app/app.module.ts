@@ -7,11 +7,13 @@ import { IonicPageModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SumasPage } from '../pages/sumas/sumas';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SumasPage
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    SumasPage
   ],
   providers: [
     StatusBar,

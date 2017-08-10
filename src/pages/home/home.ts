@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Content } from 'ionic-angular';
+import { SumasPage } from '../sumas/sumas';
 import * as $ from 'jquery'
 
 @Component({
@@ -47,6 +48,9 @@ export class HomePage {
     $("ion-content").animate({ scrollTop: 300 }, 300);
   }
 
+  goToSumas(){
+    this.navCtrl.push(SumasPage);
+  }
 
   ngOnInit() {
     console.log("entre aqui")
