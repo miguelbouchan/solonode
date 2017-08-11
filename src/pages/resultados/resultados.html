@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ResultadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header style="display:none">
+  <ion-navbar >
+    <ion-title>resultados</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+  <p>  
+  El Resultado de tus datos son:
+  <br>
+    Respuestas Correctas: {{correcto}}
+  <br>
+    Respuestas Incorrectas: {{incorrecto}}
+  <br>
+    Tiempo en realizarlo: {{tiempo}} milisegundos.
+  <br>
+  <br>
+  <span [ngClass]="{'hide': !ganador}">Te ganaste un dulde </span>
+  <span [ngClass]="{'hide': ganador}">Necesitas practicar mas </span>
+  </div>
+
+   <br>
+  <br>
+
+  <p (click)="inicio()">ir al inicio</p>
+  
+</ion-content>

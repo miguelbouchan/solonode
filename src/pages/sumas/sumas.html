@@ -12,30 +12,30 @@
 
 
 <ion-content padding>
-  <div>
-      2+2
+  <div style="font-size: 30px;">
+      {{i1}}+{{i2}}:
   </div>
   <div class="resultados">
-      <div class="seccion">
-        <div id="01" (click)="resultado($event)"> 
-          <p>{{valor[0][1]}}</p>
+      <div class="seccion" style="text-align: center; display: inline-flex; padding-left: 10px; padding-right: 10px;">
+        <div id="01" class="pad" (click)="resultado(a)"> 
+          <p>{{a}}</p>
         </div>  
-        <div id="02" (click)="resultado($event)">
-          <p>{{valor[1][2]}}</p>
+        <div id="02" class="pad" (click)="resultado(b)">
+          <p>{{b}}</p>
         </div> 
-        <div id="03" (click)="resultado($event)">
-          <p>{{valor[2][3]}}</p>
+        <div id="03" class="pad" (click)="resultado(c)">
+          <p>{{c}}</p>
         </div>
       </div> 
-      <div class="seccion" >
-        <div id="04" (click)="resultado($event)">
-          <p>{{valor[3][4]}}</p>
+      <div class="seccion">
+        <div id="04" class="pad" (click)="resultado(d)">
+          <p>{{d}}</p>
         </div> 
-        <div id="05" (click)="resultado($event)">
-          <p>{{valor[4][5]}}</p>
+        <div id="05" class="pad" (click)="resultado(e)">
+          <p>{{e}}</p>
         </div> 
-        <div id="06" (click)="resultado($event)">
-          <p>{{valor[5][6]}}</p>
+        <div id="06" class="pad" (click)="resultado(f)">
+          <p>{{f}}</p>
         </div> 
       </div> 
   </div>

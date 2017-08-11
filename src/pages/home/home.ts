@@ -37,7 +37,7 @@ export class HomePage {
     //cont.scrollTop(0, registerDoneOffset, 500)
 
     this.content.scrollTo(0, registerDoneOffset, 500);
-
+    this.openMenu()
   }
 
   slideTo(x, y, time) {
