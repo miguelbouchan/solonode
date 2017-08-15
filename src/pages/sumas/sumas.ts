@@ -25,7 +25,7 @@ export class SumasPage {
   e: any;
   f: any;
 
-  maximo:any=9;
+  maximo:any=14;
   inicio:any=0;
   correcto:any=0;
   incorrecto:any=0;
@@ -58,6 +58,7 @@ export class SumasPage {
     }
     let caso = this.getRandomInt(1, 4);
     console.log("caso: " + caso)
+    this.cambiarColorTarjetas();
 
     switch (caso) {
       case 1:
@@ -110,6 +111,17 @@ export class SumasPage {
     if (!hayResultado) {
       this.agregaResultado();
     }
+
+  }
+
+  cambiarColorTarjetas(){
+    var tarjetas:any=document.getElementsByClassName('pad');
+    
+    for (var i=0;i<tarjetas.length;i++){
+      var rand=this.getRandomInt(1, 18);
+      tarjetas[i].setAttribute("id", "id"+rand);
+    }
+    console.log(tarjetas)
 
   }
 
