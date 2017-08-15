@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+//import { HomePage } from '../home/home';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the ResultadosPage page.
@@ -41,7 +42,7 @@ export class ResultadosPage {
   }
 
   inicio(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.push(MenuPage);
   }
 
 }
