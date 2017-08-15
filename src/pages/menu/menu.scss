@@ -1,0 +1,28 @@
+@import '../../styles/fonts.scss';
+
+//estilo 3
+///font-family: 'Roboto Condensed', sans-serif;
+///font-family: 'Finger Paint', cursive;
+
+//ff1
+//font-family: 'Sedgwick Ave', cursive;
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 21px;
+    margin-top: 12px;
+    text-align: center;
+    font-family: 'Sedgwick Ave', cursive;
+  }
+
+.muestra{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+

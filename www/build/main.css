@@ -25509,3 +25509,98 @@ ul {
   -webkit-transform: rotate(180deg) scale(1.1);
   transform: rotate(180deg) scale(1.1);
 }
+
+@font-face {
+  font-family: 'Sedgwick Ave';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sedgwick Ave Regular"), local("SedgwickAve-Regular"), url("../assets/font1/ff1.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Finger Paint';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Finger Paint Regular"), local("FingerPaint-Regular"), url("../assets/font1/estilo3.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.boton_personalizado {
+  text-decoration: none;
+  padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #1883ba;
+  border-radius: 21px;
+  margin-top: 12px;
+  text-align: center;
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+.muestra {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Sedgwick Ave';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sedgwick Ave Regular"), local("SedgwickAve-Regular"), url("../assets/font1/ff1.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Finger Paint';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Finger Paint Regular"), local("FingerPaint-Regular"), url("../assets/font1/estilo3.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.suma {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Finger Paint', cursive;
+  font-size: 50px;
+}
+
+.pregunta-section {
+  text-align: center;
+}
+
+.pad {
+  border: 1px solid blue;
+  font-size: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 66px;
+}
+
+.seccion {
+  margin-top: 40px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 359px) {
+  .seccion {
+    position: relative;
+    left: -7px;
+  }
+}
+
+.resultados {
+  text-align: center;
+}

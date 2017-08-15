@@ -1,3 +1,18 @@
 @import 'vendor' ;
 $FontPathOpenSans: "../../node_modules/npm-font-open-sans/fonts";
 @import '../../node_modules/npm-font-open-sans/open-sans.scss';
+
+@font-face {
+  font-family: 'Sedgwick Ave';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sedgwick Ave Regular'), local('SedgwickAve-Regular'), url('../assets/font1/ff1.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Finger Paint';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Finger Paint Regular'), local('FingerPaint-Regular'), url('../assets/font1/estilo3.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
