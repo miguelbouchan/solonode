@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home'
+import { NavController, NavParams, Platform } from 'ionic-angular';
+import { HomePage } from '../home/home';
+import { AcercaPage } from '../acerca/acerca'
 
 /**
  * Generated class for the MenuPage page.
@@ -15,8 +16,10 @@ import { HomePage } from '../home/home'
   templateUrl: 'menu.html',
 })
 export class MenuPage {
+  platform:any = Platform;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, platform: Platform) {
+    this.platform = platform;
   }
 
   ionViewDidLoad() {
@@ -26,5 +29,15 @@ export class MenuPage {
   iniciarJuego(){
   this.navCtrl.push(HomePage);
   }
+
+  acerca(){
+    this.navCtrl.push(AcercaPage);
+  }
+
+  salir(){
+    console.log("saliendo")
+    this.platform.exitApp();
+  }
+
 
 }

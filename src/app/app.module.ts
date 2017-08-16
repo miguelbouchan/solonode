@@ -10,6 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { SumasPage } from '../pages/sumas/sumas';
 import { ResultadosPage } from '../pages/resultados/resultados';
 import { MenuPage } from '../pages/menu/menu';
+import { AcercaPage } from '../pages/acerca/acerca';
+import { InstruccionesPage } from '../pages/instrucciones/instrucciones';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MenuPage } from '../pages/menu/menu';
     HomePage,
     SumasPage,
     ResultadosPage,
-    MenuPage
+    MenuPage,
+    AcercaPage,
+    InstruccionesPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { MenuPage } from '../pages/menu/menu';
     HomePage,
     SumasPage,
     ResultadosPage,
-    MenuPage
+    MenuPage,
+    AcercaPage,
+    InstruccionesPage
   ],
   providers: [
     StatusBar,
