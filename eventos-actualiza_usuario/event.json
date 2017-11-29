@@ -1,0 +1,16 @@
+{
+    "nombre":"angel",
+    "apellido_paterno":"bouchanGG",
+    "apellido_materno":"martinezGG",
+    "correo":"prueb79@gmail.es",
+    "edad":75,
+    "nick":"mk79",
+    "password":"123456",
+    "id_rol":1,
+    "telefono":153453333,
+    "id_estado":21,
+    "url_avatar":"abcavatar",
+    "token":"abctoken",
+    "descripcion_rol":"ventas",
+    "es_activo":0
+}

@@ -1,0 +1,17 @@
+{
+    "nombre":"angel",
+    "apellido_paterno":"bouchan",
+    "apellido_materno":"martinez",
+    "correo":"operador33@gmail.com",
+    "edad":20,
+    "nick":"operador33",
+    "password":"123456",
+    "id_rol":2,
+    "id_estado":21,
+    "telefono":5585549140,
+    "url_avatar":null,
+    "token":null,
+    "descripcion_rol":"ventas",
+    "latitud":"44.65461616511648",
+    "longitud":"-52.54651654651"
+}

@@ -1,0 +1,17 @@
+{
+    "nombre":"angel",
+    "apellido_paterno":"bouchan",
+    "apellido_materno":"martinez",
+    "correo":"alngel08@gmail.es",
+    "edad":80,
+    "nick":"alngel08",
+    "password":"123456",
+    "id_rol":1,
+    "id_estado":2,
+    "telefono":"8888888888",
+    "url_avatar":"abcavatar",
+    "token":"abctoken",
+    "descripcion_rol":"ventas",
+    "latitud":"44.65461616511648",
+    "longitud":"-52.54651654651"
+}

@@ -1,0 +1,29 @@
+{
+    "descripcion": "iniciativa",
+    "direccion": "nuevo",
+    "latitud": "10.654813234",
+    "longitud": "8.234651654",
+    "fecha_evento": "2017-11-28",
+    "id_categoria": 13,
+    "id_estatus": 3,
+    "actividad": [
+        {
+            "id_actividad": 5
+        }
+    ],
+    "operadores": [
+        {
+            "id_operador": 51,
+            "encargado":0
+        },
+        {
+            "id_operador": 54,
+            "encargado":1
+        }
+    ],
+    "analistas":[
+        {
+            "id_analista": 52
+        }
+    ]
+}

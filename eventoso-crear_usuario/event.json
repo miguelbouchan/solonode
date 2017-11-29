@@ -1,0 +1,17 @@
+{
+    "nombre":"luis",
+    "apellido_paterno":"ramirez",
+    "apellido_materno":"martinez",
+    "correo":"bmiguelangelbouchan3@hotmail.com",
+    "edad":20,
+    "nick":"bmike33334",
+    "password":"123456",
+    "id_rol":1,
+    "id_estado":2,
+    "telefono":8888888888,
+    "url_avatar":null,
+    "token":"abctoken",
+    "descripcion_rol":"ventas",
+    "latitud":"44.65461616511648",
+    "longitud":"-52.54651654651"
+}

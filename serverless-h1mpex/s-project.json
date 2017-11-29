@@ -1,5 +1,0 @@
-{
-  "name": "serverless-h1mpex",
-  "custom": {},
-  "plugins": ["serverless-serve"]
-}
