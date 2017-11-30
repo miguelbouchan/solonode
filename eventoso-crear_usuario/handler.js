@@ -5,11 +5,6 @@ var bcrypt = require("bcrypt-nodejs");
 var aws = require("aws-sdk");
 var nodemailer = require("nodemailer");
 
-// load aws config
-aws.config.accessKeyId = "AKIAI26VBOMO6DGDPGYQ";
-aws.config.secretAccessKey = "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";
-aws.config.region = "us-west-2";
-
 module.exports.handler = function(event, context, cb) {
   var connection = mysql.createConnection({
     host: process.env.MYSQL_HOST,
@@ -94,14 +89,7 @@ module.exports.handler = function(event, context, cb) {
     }
   }
   function sendmail(micorreo, passw, rows) {
-    // load AWS SES
-    var ses = new aws.SES({ apiVersion: "2010-12-01" });
-
-    // send to list
-    var to = [micorreo];
-
-    // this must relate to a verified SES account
-    var from = "admin@rafagana2018.com";
+   
 
     /*
         ses.sendEmail({
